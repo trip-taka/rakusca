@@ -1,0 +1,13 @@
+{
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit",
+    "source.addMissingImports": "explicit" // 未importのモジュールを自動で探してimport文を追加する
+  },
+	"[javascript][typescript][javascriptreact][typescriptreact][json][jsonc]": {
+		"editor.tabSize": 2, // インデントのサイズ指定（biome.jsonと合わせる）
+		"editor.defaultFormatter": "biomejs.biome" // フォーマッターの指定
+	},
+  "editor.formatOnSave": true, // ファイル保存時にフォーマットする
+  "markuplint.enable": true // Markuplintを有効化する
+}
