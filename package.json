@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "biome lint --write .",
+    "format": "biome format .",
+    "check": "biome check --write .",
+    "markuplint": "markuplint \"./**/*.tsx\"",
+    "lint-staged": "lint-staged",
+    "secretlint": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'",
+    "prepare": "husky"
   },
   "dependencies": {
     "react": "^18",
