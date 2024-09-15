@@ -1,10 +1,10 @@
 import { z } from "zod";
 
 import { publicProcedure, router } from "./trpc";
-import { greetingRouter } from "./router/greeting.router";
+import { scrapingRouter } from "./router/scraping.router";
 
 export const appRouter = router({
-  greeting: greetingRouter,
+  scraping: scrapingRouter,
 });
 
 
