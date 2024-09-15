@@ -1,11 +1,8 @@
-import { z } from "zod";
-
-import { publicProcedure, router } from "./trpc";
-import { scrapingRouter } from "./router/scraping.router";
+import { scrapingRouter } from './router/scraping.router';
+import { router } from './trpc';
 
 export const appRouter = router({
   scraping: scrapingRouter,
 });
-
 
 export type AppRouter = typeof appRouter;

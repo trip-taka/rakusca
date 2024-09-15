@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
+import { scrapeAirWork, scrapeEngage } from '@/services/scraping';
 import { publicProcedure, router } from '../trpc';
-import { scrapeEngage, scrapeAirWork } from '@/services/scraping';
 
 export const scrapingRouter = router({
   scrapeEngage: publicProcedure.query(() => {
