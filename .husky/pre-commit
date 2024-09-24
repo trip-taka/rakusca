@@ -1,1 +1,10 @@
-npm run lint-staged
+# #!/bin/sh
+# . "$(dirname "$0")/_/husky.sh"
+
+# WSL環境でjestを実行
+if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
+  echo "Running tests in WSL..."
+  wsl npm test -- --passWithNoTests
+else
+  npm test -- --passWithNoTests
+fi
